@@ -39,7 +39,7 @@ Clear-Host
 
 Write-Host "";
 Write-Host "";
-Write-Host -ForegroundColor Blue "by Diablis473";
+Write-Host -ForegroundColor Blue "by Diablos473";
 Write-Host "";
 Write-Host -ForegroundColor Red " Tranquilo joven usuario, estas en manos de los expertos. ";
 Write-Host "";
@@ -71,7 +71,6 @@ if (!(Get-PSDrive -Name HKLM -PSProvider Registry)){
     Catch{Write-Warning "Error montando HKEY_Local_Machine"}
 }
 $bv = ("bam", "bam\State")
-Try{$Users = foreach($ii in $bv){Get-ChildItem -Path "HKLM:\SYSTEM\CurrentControlSet\Services\$($ii)\UserSettings\" | Select-Object -ExpandProperty PSChildName}}
 Catch{
     Write-Warning "Error Parseando BAM Key. Probablemente no soporta tu version de Windows :( "
     Exit
