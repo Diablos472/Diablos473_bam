@@ -39,7 +39,8 @@ Clear-Host
 
 Write-Host "";
 Write-Host "";
-Write-Host -ForegroundColor blue "by Diablos473"
+Write-Host -ForegroundColor Blue "by Diablis473";
+Write-Host "";
 Write-Host -ForegroundColor Red " Tranquilo joven usuario, estas en manos de los expertos. ";
 Write-Host "";
 Write-Host -ForegroundColor Magenta " ░██████╗░█████╗░██╗░░░░░░█████╗░  ██╗░░░░░███████╗░██████╗░███████╗███╗░░██╗██████╗░░██████╗ ";
@@ -49,8 +50,7 @@ Write-Host -ForegroundColor Magenta " ░╚═══██╗██║░░█
 Write-Host -ForegroundColor Magenta " ██████╔╝╚█████╔╝███████╗╚█████╔╝  ███████╗███████╗╚██████╔╝███████╗██║░╚███║██████╔╝██████╔╝ ";
 Write-Host -ForegroundColor Magenta " ╚═════╝░░╚════╝░╚══════╝░╚════╝░  ╚══════╝╚══════╝░╚═════╝░╚══════╝╚═╝░░╚══╝╚═════╝░╚═════╝░ ";
 Write-Host "";
-Write-Host -ForegroundColor Cyan "Juro lealtad inquebrantable a Illeuco, Rangous, IgnExpi, Diablos473, NerviousMaker, Execu2Chris, tyseh y Shadia.en el SS Team. Mi compromiso es un vínculo virtual, tejido con la firmeza de códigos entrelazados. En cada SS, mi lealtad persistirá, forjando una camaradería digital eterna en el vasto reino de la red.
- en el SS Tea Mi compromiso es un vínculo virtual, tejido con la firmeza de códigos entrelazados. En cada SS, mi lealtad persistirá, forjando una camaradería digital eterna en el vasto reino de la red. ";
+Write-Host -ForegroundColor Cyan "Juro lealtad inquebrantable a Illeuco, Rangous, IgnExpi, Diablos473, NerviousMaker, Execu2Chris, tyseh, Shadia  y Diwq.. Mi compromiso es un vínculo virtual, tejido con la firmeza de códigos entrelazados. En cada SS, mi lealtad persistirá, forjando una camaradería digital eterna en el vasto reino de la red. ";
 Write-Host "";
 Write-Host -ForegroundColor DarkGreen " discord.gg/sololegends ";
 Write-Host "";
