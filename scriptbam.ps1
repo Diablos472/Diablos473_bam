@@ -39,6 +39,7 @@ Clear-Host
 
 Write-Host "";
 Write-Host "";
+Write-Host -ForegroundColor Blue "By Diablos473"
 Write-Host -ForegroundColor Red " Tranquilo joven usuario, estas en manos de los expertos. ";
 Write-Host "";
 Write-Host -ForegroundColor Magenta " ░██████╗░█████╗░██╗░░░░░░█████╗░  ██╗░░░░░███████╗░██████╗░███████╗███╗░░██╗██████╗░░██████╗ ";
