@@ -1,5 +1,4 @@
-﻿$ErrorActionPreference = "SilentlyContinue"
-
+$ErrorActionPreference = "SilentlyContinue"
 
 function Get-Signature {
 
@@ -14,23 +13,23 @@ function Get-Signature {
 
     if ($Existence) {
         if ($Authenticode -eq "Valid") {
-            $Signature = "Firma Valida"
+            $Signature = "Valid Signature"
         }
         elseif ($Authenticode -eq "NotSigned") {
-            $Signature = "Firma Invalida (No esta firmado)"
+            $Signature = "Invalid Signature (NotSigned)"
         }
         elseif ($Authenticode -eq "HashMismatch") {
-            $Signature = "Firma Invalida (HashMismatch)"
+            $Signature = "Invalid Signature (HashMismatch)"
         }
         elseif ($Authenticode -eq "NotTrusted") {
-            $Signature = "Firma Invalida (NotTrusted)"
+            $Signature = "Invalid Signature (NotTrusted)"
         }
         elseif ($Authenticode -eq "UnknownError") {
-            $Signature = "Firma Invalida (UnknownError)"
+            $Signature = "Invalid Signature (UnknownError)"
         }
         return $Signature
     } else {
-        $Signature = "El archivo no fue encontrado"
+        $Signature = "File Was Not Found"
         return $Signature
     }
 }
@@ -56,7 +55,6 @@ Write-Host -ForegroundColor DarkGreen " discord.gg/sololegends ";
 Write-Host "";
 Write-Host "";
 
-
 function Test-Admin {;$currentUser = New-Object Security.Principal.WindowsPrincipal $([Security.Principal.WindowsIdentity]::GetCurrent());$currentUser.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator);}
 if (!(Test-Admin)) {
     Write-Warning "Brother ejecutalo como ADMIN :V"
@@ -71,8 +69,9 @@ if (!(Get-PSDrive -Name HKLM -PSProvider Registry)){
     Catch{Write-Warning "Error montando HKEY_Local_Machine"}
 }
 $bv = ("bam", "bam\State")
+Try{$Users = foreach($ii in $bv){Get-ChildItem -Path "HKLM:\SYSTEM\CurrentControlSet\Services\$($ii)\UserSettings\" | Select-Object -ExpandProperty PSChildName}}
 Catch{
-    Write-Warning "Error Parseando BAM Key. Probablemente no soporta tu version de Windows :( "
+    Write-Warning "Error Parseando BAM Key. Probablemente no soporta tu version de Windows :("
     Exit
 }
 $rpath = @("HKLM:\SYSTEM\CurrentControlSet\Services\bam\","HKLM:\SYSTEM\CurrentControlSet\Services\bam\state\")
@@ -85,8 +84,8 @@ $Bam = Foreach ($Sid in $Users){$u++
             
         foreach($rp in $rpath){
            $BamItems = Get-Item -Path "$($rp)UserSettings\$Sid" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Property
-           Write-Host -ForegroundColor DarkRed "Extrayendo " -NoNewLine
-           Write-Host -ForegroundColor White "$($rp)UserSettings\$SID"
+           Write-Host -ForegroundColor Red "Extracting " -NoNewLine
+           Write-Host -ForegroundColor Blue "$($rp)UserSettings\$SID"
            $bi = 0 
 
             Try{
