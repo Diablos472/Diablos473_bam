@@ -38,7 +38,7 @@ Clear-Host
 
 Write-Host "";
 Write-Host "";
-Write-Host -ForegroundColor Blue "by Diablos473";
+Write-Host -ForegroundColor Blue "Forked by Diablos473";
 Write-Host "";
 Write-Host -ForegroundColor Red " Tranquilo joven usuario, estas en manos de los expertos. ";
 Write-Host "";
